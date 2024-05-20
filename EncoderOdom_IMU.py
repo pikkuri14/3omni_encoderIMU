@@ -27,6 +27,8 @@ def read_arduino():
 
 def read_imu():
     """Read IMU data."""
+
+    # in the arduino side use -> Serial.print(nilaiyawrate)
     line = imu_serial.readline().decode('utf-8').strip()
     imu_data = float(line)  # Assuming we get gyroZ as a single float
     return imu_data
